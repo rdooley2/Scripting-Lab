@@ -3,8 +3,7 @@
  ### [YouTube Demonstration]()
 
 <h2>Description</h2>
-
-
+This project makes use of a Powershell script that acts as a File Integrity Monitor. By collecting file hashes, the script can alert the user when a selected file path has had its files deleted or modified as well as if new files are created. This project is meant to be a proof of concept in regards to the concept of integrity from the CIA Triad and also serves as a good introduction to scripting. 
 
 
 <h2>Languages and Utilities Used</h2>
