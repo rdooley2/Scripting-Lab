@@ -1,4 +1,4 @@
-<h1>Scripting - FIM (File Integrity Monitor)</h1>
+<h1>Powershell - Scripting a FIM (File Integrity Monitor)</h1>
 
  ### [YouTube Demonstration](https://youtu.be/pJ97mlLQcUc)
 
