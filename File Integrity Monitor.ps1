@@ -12,7 +12,7 @@ Function eraseBaseline() {
     }
 }
 
-Function getHashes() {
+Function writeToBaseline() {
     $files = Get-ChildItem -Path $directoryPath
     
     foreach ($f in $files) {
@@ -22,7 +22,7 @@ Function getHashes() {
     }
 }
 
-Function traverseHashes() {
+Function populateDictionary() {
     $baselinePath = Join-Path -Path (Split-Path -Path $directoryPath) -ChildPath "baseline.txt"
     $filePath = Get-Content -Path $baselinePath
     $hashDictionary = @{}
@@ -38,13 +38,14 @@ $directoryPath = Read-Host "Please enter the directory path to monitor"
 
 eraseBaseline
 
-getHashes
+writeToBaseline
 
-$hashDictionary = traverseHashes
+$hashDictionary = populateDictionary
+
+Write-Host "Checking File Hashes..."
 
 while ($true) {
     Start-Sleep -Seconds 1
-    Write-Host "Checking File Hashes..."
 
     $files = Get-ChildItem -Path $directoryPath
     
@@ -54,6 +55,7 @@ while ($true) {
         # Checks for file creation
         if ($hashDictionary[$hash.Path] -eq $null) {
             Write-Host "$($hash.Path) has been created" -ForegroundColor Yellow
+            # File hacreation
         }
 
         # Checks for file changes
