@@ -39,7 +39,7 @@ Collect the file path to scan user input, erase the previous baseline file, coll
 <br />
 <br />
 Create a loop that constantly checks to see if the new files are created, deleted, or modified: <br/><br />
-<img src="https://i.imgur.com/kPYvFcy.png" height="80%" width="80%" alt="Script Steps"/>
+<img src="https://imgur.com/a/j2pdoL1" height="80%" width="80%" alt="Script Steps"/>
 <br />
 <br />
 <br />
