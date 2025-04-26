@@ -83,7 +83,7 @@ First I went into the folder and created a fourth file: <br/><br />
 <br />
 <br />
 Going back to the console, we can see that the script detected that addition: <br/><br />
-<img src="https://i.imgur.com/BagZhsj.png" height="80%" width="80%" alt="Script Steps"/>
+<img src="https://i.imgur.com/1FMRNTu.png" height="80%" width="80%" alt="Script Steps"/>
 <br />
 <br />
 <br />
