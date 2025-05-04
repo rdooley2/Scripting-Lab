@@ -1,4 +1,4 @@
-<h1>Powershell - Scripting an FIM (File Integrity Monitor)</h1>
+<h1>Custom File Integrity Monitoring Script</h1>
 
 <h2>Overview</h2>
 In this project, I created a simple File Integrity Monitor, or FIM, using a Powershell script. This project aimed to achieve the following goals:
