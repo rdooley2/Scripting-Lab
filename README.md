@@ -1,7 +1,7 @@
 <h1>Custom File Integrity Monitoring Script</h1>
 
 <h2>Overview</h2>
-In this project, I created a simple File Integrity Monitor, or FIM, using a Powershell script. This project aimed to achieve the following goals:
+I created a simple File Integrity Monitor or FIM using a Powershell script. This project aimed to achieve the following goals:
 <br><br>
 <ul>
  <li>Gain experience with scripting</li>
@@ -10,7 +10,7 @@ In this project, I created a simple File Integrity Monitor, or FIM, using a Powe
 </ul>
 
 <h2>Summary</h2>
-The File Integrity Monitor I developed functions by asking the user for a file path to monitor. After a valid file path is provided, the script collects the hashes of each file and stores them in a text file. Next, the script transfers all the hashes from the text file into a newly created dictionary. Finally, if any changes occur within the specified folder, the script will alert the user, via the console, of these changes. The script is written to detect when a selected file path has had its files deleted or modified and if new files are created. It does this by comparing the contents of the dictionary to the current hashes of the specified file path. 
+The File Integrity Monitor I developed functions by asking the user for a file path to monitor. After the user provides a valid file path, the script collects the hashes of each file and stores them in a text file. Next, the script transfers all the hashes from the text file into a newly created dictionary. Finally, the script will alert the user via the console if any changes occur within the specified folder. I wrote the script to detect and report when the system deletes, modifies, or creates new files in the selected path. It does this by comparing the dictionary's contents to the current hashes of the specified file path.   
 
 <h2>Languages and Utilities Used</h2>
 
@@ -29,7 +29,7 @@ This second function erases the baseline file if it already exists. The baseline
 <br />
 <br />
 <br />
-This third function writes each hash and file path to our baseline file: <br/><br />
+This third function writes each hash and file path to the baseline file: <br/><br />
 <img src="https://i.imgur.com/9eQGJPP.png" height="80%" width="80%" alt="Script Steps"/>
 <br />
 <br />
@@ -39,12 +39,12 @@ This fourth function creates the dictionary and populates it with the data from 
 <br />
 <br />
 <br />
-Now that the functions are defined, we can write the rest of the code. This portion of the code collects the file path from user input and erases the previous baseline file. Next, it will collect the hashes, write them to the baseline, and create/populate the dictionary. Finally, it will write to the console that it is checking the hashes: <br/><br />
+Now that the functions are defined, I can write the rest of the code. This portion of the code collects the file path from user input and erases the previous baseline file. Next, it will collect the hashes, write them to the baseline, and create/populate the dictionary. Finally, it will write to the console that it is checking the hashes: <br/><br />
 <img src="https://i.imgur.com/HsNLNLO.png" height="80%" width="80%" alt="Script Steps"/>
 <br />
 <br />
 <br />
-The rest of the code is written within this while loop. Essentially, for each file in the folder, we iterate through and use a bunch of if statements to enforce integrity. Since this part is so big, I will break down what each piece is doing separately: <br/><br />
+I wrote the rest of the code within this while loop. Essentially, I iterate through each file in the folder and use a bunch of if statements to enforce integrity. Since this part is so big, I will break down what each piece is doing separately: <br/><br />
 <img src="https://i.imgur.com/khC7YHs.png" height="80%" width="80%" alt="Script Steps"/>
 <br />
 <br />
@@ -59,7 +59,7 @@ Within this else statement, the codes checks if the files have changed or not: <
 <br />
 <br />
 <br />
-This final for loop checks if any files have been deleted: <br/><br />
+This final for loop checks whether the system deleted any files: <br/><br />
 <img src="https://i.imgur.com/ec79aSl.png" height="80%" width="80%" alt="Script Steps"/>
 <br />
 <br />
@@ -72,17 +72,17 @@ For this demonstration, I created a folder with three files: <br/><br />
 <br />
 <br />
 <br />
-Upon starting the script, I am prompted for a file path. Now that I have given the script a file path, it will continuously monitor that path:<br/><br />
+Upon starting the script, the code prompts for a file path. Now that I have given the script a file path, it will continuously monitor that path:<br/><br />
 <img src="https://i.imgur.com/pciFv7r.png" height="80%" width="80%" alt="Script Steps"/>
 <br />
 <br />
 <br />
-First I went into the folder and created a fourth file: <br/><br />
+First, I went into the folder and created a fourth file: <br/><br />
 <img src="https://i.imgur.com/oHjXxmX.png" height="80%" width="80%" alt="Script Steps"/>
 <br />
 <br />
 <br />
-Going back to the console, we can see that the script detected that addition: <br/><br />
+Going back to the console, I can see that the script detected that addition: <br/><br />
 <img src="https://i.imgur.com/1FMRNTu.png" height="80%" width="80%" alt="Script Steps"/>
 <br />
 <br />
@@ -92,7 +92,7 @@ Next, I went into the folder and edited the first file: <br/><br />
 <br />
 <br />
 <br />
-Going back to the console, we can see that the script detected that modification: <br/><br />
+Going back to the console, I can see that the script detected that modification: <br/><br />
 <img src="https://i.imgur.com/B7onWWY.png" height="80%" width="80%" alt="Script Steps"/>
 <br />
 <br />
@@ -102,9 +102,9 @@ Finally, I went into the folder and deleted the second file: <br/><br />
 <br />
 <br />
 <br />
-Going back to the console, we can see that the script detected that deletion: <br/><br />
+Going back to the console, I can see that the script detected that deletion: <br/><br />
 <img src="https://i.imgur.com/CULmlfv.png" height="80%" width="80%" alt="Script Steps"/>
 <br />
 <br />
 <br />
-And we're done!<br/><br/>
+Thanks for reading this far! I enjoyed creating this File Integrity Monitor and hope you enjoyed learning about it!<br/><br/>
